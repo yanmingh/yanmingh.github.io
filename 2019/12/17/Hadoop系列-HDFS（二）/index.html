@@ -22,7 +22,7 @@
     <meta name="description" content="">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <title>tags · Let&#39;s share</title>
+    <title>Hadoop系列-HDFS（二） · Let&#39;s share</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -203,12 +203,23 @@
 <meta name="generator" content="Hexo 4.1.1"></head>
 
     
+        <body class="post-body">
+    
     
 <header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >This isn&#39;t a Bug</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">Hadoop系列-HDFS（二）</a>
+            </div>
+    </div>
     
     <a class="home-link" href=/>This isn't a Bug</a>
 </header>
@@ -220,24 +231,78 @@
 
 
 
+
+height:50vh;
 ">
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/index-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+            
+            Hadoop系列-HDFS（二）
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "大数据">大数据</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Hadoop">Hadoop</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "HDFS">HDFS</a>
+    
+</div>
+                
+                
+                    <div class="post-intro-read">
+                        <span>字数统计: <span class="post-count word-count">805</span>阅读时长: <span class="post-count reading-time">2 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2019/12/17</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -340,14 +405,22 @@
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        
+        <!--     内容开始        -->
+
+
+<!--  正文标题   -->
+
+
+<!-- 正文内容 -->
+
+<h1 id="1-HDFS安全模式"><a href="#1-HDFS安全模式" class="headerlink" title="1.HDFS安全模式"></a>1.HDFS安全模式</h1><h3 id="在启动的时候，名字节点进入一个叫做安全模式的特殊状态。安全模式中不允许发生文件块的复制。名字节点接受来自数据节点的心跳和块报告。一个块报告包含数据节点所拥有的数据块的列表。"><a href="#在启动的时候，名字节点进入一个叫做安全模式的特殊状态。安全模式中不允许发生文件块的复制。名字节点接受来自数据节点的心跳和块报告。一个块报告包含数据节点所拥有的数据块的列表。" class="headerlink" title="在启动的时候，名字节点进入一个叫做安全模式的特殊状态。安全模式中不允许发生文件块的复制。名字节点接受来自数据节点的心跳和块报告。一个块报告包含数据节点所拥有的数据块的列表。"></a>在启动的时候，名字节点进入一个叫做安全模式的特殊状态。安全模式中不允许发生文件块的复制。名字节点接受来自数据节点的心跳和块报告。一个块报告包含数据节点所拥有的数据块的列表。</h3><h3 id="每一个块有一个特定的最小复制数。当名字节点检查这个块已经大于最小的复制数就被认为是安全地复制了，当达到配置的块安全复制比例时（加上额外的30秒），名字节点就退出安全模式。它将检测数据块的列表，将小于特定复制数的块复制到其他的数据节点。"><a href="#每一个块有一个特定的最小复制数。当名字节点检查这个块已经大于最小的复制数就被认为是安全地复制了，当达到配置的块安全复制比例时（加上额外的30秒），名字节点就退出安全模式。它将检测数据块的列表，将小于特定复制数的块复制到其他的数据节点。" class="headerlink" title="每一个块有一个特定的最小复制数。当名字节点检查这个块已经大于最小的复制数就被认为是安全地复制了，当达到配置的块安全复制比例时（加上额外的30秒），名字节点就退出安全模式。它将检测数据块的列表，将小于特定复制数的块复制到其他的数据节点。"></a>每一个块有一个特定的最小复制数。当名字节点检查这个块已经大于最小的复制数就被认为是安全地复制了，当达到配置的块安全复制比例时（加上额外的30秒），名字节点就退出安全模式。它将检测数据块的列表，将小于特定复制数的块复制到其他的数据节点。</h3><h1 id="2-文件系统的元数据的持久化"><a href="#2-文件系统的元数据的持久化" class="headerlink" title="2.文件系统的元数据的持久化"></a>2.文件系统的元数据的持久化</h1><h3 id="HDFS的命名空间是由名字节点来存储的。名字节点使用叫做EditLog的事务日志来持久记录每一个对文件系统元数据的改变，如在HDFS中创建一个新的文件，名字节点将会在EditLog中插入一条记录来记录这个改变。类似地，改变文件的复制因子也会向EditLog中插入一条记录。名字节点在本地文件系统中用一个文件来存储这个EditLog。整个文件系统命名空间，包括文件块的映射表和文件系统的配置都存在一个叫FsImage的文件中，FsImage也存放在名字节点的本地文件系统中。"><a href="#HDFS的命名空间是由名字节点来存储的。名字节点使用叫做EditLog的事务日志来持久记录每一个对文件系统元数据的改变，如在HDFS中创建一个新的文件，名字节点将会在EditLog中插入一条记录来记录这个改变。类似地，改变文件的复制因子也会向EditLog中插入一条记录。名字节点在本地文件系统中用一个文件来存储这个EditLog。整个文件系统命名空间，包括文件块的映射表和文件系统的配置都存在一个叫FsImage的文件中，FsImage也存放在名字节点的本地文件系统中。" class="headerlink" title="HDFS的命名空间是由名字节点来存储的。名字节点使用叫做EditLog的事务日志来持久记录每一个对文件系统元数据的改变，如在HDFS中创建一个新的文件，名字节点将会在EditLog中插入一条记录来记录这个改变。类似地，改变文件的复制因子也会向EditLog中插入一条记录。名字节点在本地文件系统中用一个文件来存储这个EditLog。整个文件系统命名空间，包括文件块的映射表和文件系统的配置都存在一个叫FsImage的文件中，FsImage也存放在名字节点的本地文件系统中。"></a>HDFS的命名空间是由名字节点来存储的。名字节点使用叫做EditLog的事务日志来持久记录每一个对文件系统元数据的改变，如在HDFS中创建一个新的文件，名字节点将会在EditLog中插入一条记录来记录这个改变。类似地，改变文件的复制因子也会向EditLog中插入一条记录。名字节点在本地文件系统中用一个文件来存储这个EditLog。整个文件系统命名空间，包括文件块的映射表和文件系统的配置都存在一个叫FsImage的文件中，FsImage也存放在名字节点的本地文件系统中。</h3><h3 id="名字节点在内存中保留一个完整的文件系统命名空间和文件块的映射表的镜像。这个元数据被设计成紧凑的，这样4GB内存的名字节点就足以处理非常大的文件数和目录。名字节点启动时，它将从磁盘中读取FsImage和EditLog，将EditLog中的所有事务应用到FsImage的仿内存空间，然后将新的FsImage刷新到本地磁盘中，因为事务已经被处理并已经持久化的FsImage中，然后就可以截去旧的EditLog。这个过程叫做检查点。当前实现中，检查点仅在名字节点启动的时候发生，正在支持周期性的检查点。"><a href="#名字节点在内存中保留一个完整的文件系统命名空间和文件块的映射表的镜像。这个元数据被设计成紧凑的，这样4GB内存的名字节点就足以处理非常大的文件数和目录。名字节点启动时，它将从磁盘中读取FsImage和EditLog，将EditLog中的所有事务应用到FsImage的仿内存空间，然后将新的FsImage刷新到本地磁盘中，因为事务已经被处理并已经持久化的FsImage中，然后就可以截去旧的EditLog。这个过程叫做检查点。当前实现中，检查点仅在名字节点启动的时候发生，正在支持周期性的检查点。" class="headerlink" title="名字节点在内存中保留一个完整的文件系统命名空间和文件块的映射表的镜像。这个元数据被设计成紧凑的，这样4GB内存的名字节点就足以处理非常大的文件数和目录。名字节点启动时，它将从磁盘中读取FsImage和EditLog，将EditLog中的所有事务应用到FsImage的仿内存空间，然后将新的FsImage刷新到本地磁盘中，因为事务已经被处理并已经持久化的FsImage中，然后就可以截去旧的EditLog。这个过程叫做检查点。当前实现中，检查点仅在名字节点启动的时候发生，正在支持周期性的检查点。"></a>名字节点在内存中保留一个完整的文件系统命名空间和文件块的映射表的镜像。这个元数据被设计成紧凑的，这样4GB内存的名字节点就足以处理非常大的文件数和目录。名字节点启动时，它将从磁盘中读取FsImage和EditLog，将EditLog中的所有事务应用到FsImage的仿内存空间，然后将新的FsImage刷新到本地磁盘中，因为事务已经被处理并已经持久化的FsImage中，然后就可以截去旧的EditLog。这个过程叫做检查点。当前实现中，检查点仅在名字节点启动的时候发生，正在支持周期性的检查点。</h3><h3 id="数据节点将HDFS数据存储到本地的文件系统中。数据节点并不知道HDFS文件的存在，它在本地文件系统中以单独的文件存储每一个HDFS文件的数据块。数据节点不会将所有的数据块文件存放到同一个目录中，而是启发式的检测每一个目录的最优文件数，并在适当的时候创建子目录。在本地同一个目录下创建所有的数据块文件不是最优的，因为本地文件系统可能不支持单个目录下巨额文件的高效操作。当数据节点启动的时候，它将扫描它的本地文件系统，根据本地的文件产生一个所有HDFS数据块的列表并报告给名字节点，这个报告称作块报告。"><a href="#数据节点将HDFS数据存储到本地的文件系统中。数据节点并不知道HDFS文件的存在，它在本地文件系统中以单独的文件存储每一个HDFS文件的数据块。数据节点不会将所有的数据块文件存放到同一个目录中，而是启发式的检测每一个目录的最优文件数，并在适当的时候创建子目录。在本地同一个目录下创建所有的数据块文件不是最优的，因为本地文件系统可能不支持单个目录下巨额文件的高效操作。当数据节点启动的时候，它将扫描它的本地文件系统，根据本地的文件产生一个所有HDFS数据块的列表并报告给名字节点，这个报告称作块报告。" class="headerlink" title="数据节点将HDFS数据存储到本地的文件系统中。数据节点并不知道HDFS文件的存在，它在本地文件系统中以单独的文件存储每一个HDFS文件的数据块。数据节点不会将所有的数据块文件存放到同一个目录中，而是启发式的检测每一个目录的最优文件数，并在适当的时候创建子目录。在本地同一个目录下创建所有的数据块文件不是最优的，因为本地文件系统可能不支持单个目录下巨额文件的高效操作。当数据节点启动的时候，它将扫描它的本地文件系统，根据本地的文件产生一个所有HDFS数据块的列表并报告给名字节点，这个报告称作块报告。"></a>数据节点将HDFS数据存储到本地的文件系统中。数据节点并不知道HDFS文件的存在，它在本地文件系统中以单独的文件存储每一个HDFS文件的数据块。数据节点不会将所有的数据块文件存放到同一个目录中，而是启发式的检测每一个目录的最优文件数，并在适当的时候创建子目录。在本地同一个目录下创建所有的数据块文件不是最优的，因为本地文件系统可能不支持单个目录下巨额文件的高效操作。当数据节点启动的时候，它将扫描它的本地文件系统，根据本地的文件产生一个所有HDFS数据块的列表并报告给名字节点，这个报告称作块报告。</h3>
     </article>
     <!-- license  -->
     
         <div class="license-wrapper">
             <p>原文作者：<a href="http://yoursite.com">yanmingh</a>
-            <p>发表日期：<a href="http://yoursite.com/tags/index.html">December 18th 2019, 5:22:32 pm</a>
-            <p>更新日期：<a href="http://yoursite.com/tags/index.html">December 18th 2019, 5:24:50 pm</a>
+            <p>发表日期：<a href="http://yoursite.com/2019/12/17/Hadoop%E7%B3%BB%E5%88%97-HDFS%EF%BC%88%E4%BA%8C%EF%BC%89/">December 17th 2019, 11:13:25 pm</a>
+            <p>更新日期：<a href="http://yoursite.com/2019/12/17/Hadoop%E7%B3%BB%E5%88%97-HDFS%EF%BC%88%E4%BA%8C%EF%BC%89/">December 26th 2019, 11:53:10 pm</a>
             <p>版权声明：本文采用<a rel="license noopener" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     
@@ -355,8 +428,18 @@
     <ul class="post-paginator">
         <li class="next">
             
+                <div class="nextSlogan">Next Post</div>
+                <a href= "/2019/12/17/Hadoop%E7%B3%BB%E5%88%97-HDFS%EF%BC%88%E4%B8%80%EF%BC%89/" title= "Hadoop系列-HDFS（一）">
+                    <div class="nextTitle">Hadoop系列-HDFS（一）</div>
+                </a>
+            
         </li>
         <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/2019/12/17/My-first-Blog/" title= "Hadoop系列-HDFS（一）">
+                    <div class="prevTitle">Hadoop系列-HDFS（一）</div>
+                </a>
             
         </li>
     </ul>
@@ -628,6 +711,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
      
     </body>
 </html>

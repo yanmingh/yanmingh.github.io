@@ -346,9 +346,9 @@
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2019/12/17/My-first-Blog/" >
+        <a class="abstract-title" href = "/2019/12/17/Hadoop%E7%B3%BB%E5%88%97-HDFS%EF%BC%88%E4%B8%80%EF%BC%89/" >
             
-                <span>Hadoop系列（一）</span>
+                <span>Hadoop系列-HDFS（一）</span>
         </a>
         <div class="abstract-content">
             
@@ -370,6 +370,87 @@ Hadoop是一个由Apache基金会所开发的分布式系统基础架构。用�
         <a class="post-tag" href="javascript:void(0);" data-tags = "大数据">大数据</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "Hadoop">Hadoop</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "HDFS">HDFS</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2019/12/17/Hadoop%E7%B3%BB%E5%88%97-HDFS%EF%BC%88%E4%BA%8C%EF%BC%89/" >
+            
+                <span>Hadoop系列-HDFS（二）</span>
+        </a>
+        <div class="abstract-content">
+            
+
+
+
+
+
+
+
+1.HDFS安全模式在启动的时候，名字节点进入一个叫做安全模式的特殊状态。安全模式中不允许发生文件块的复制。名字节点接受来自数据节点的心跳和块报告。一个块报告包含数据节点所拥有的数据块的列表。每一个块有一个特定的最小复制数。当名字节点检查这个块已经大于最小的复制数就被认为是安全地复制了，当达到配置的块安全复制比例时（加上额外的30秒），名字节点就退出安全模式。它将检测数据块的列表，将小于特定复制数的块复制到其他的数据节点。2.文件系统的元数据的持久化HDFS的命名空间是由名字节点来存储的。名字节点使用叫做EditLog的事务日志来持久记录每一个对文件系统元数据的改变，如在...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/12/17</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "大数据">大数据</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Hadoop">Hadoop</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "HDFS">HDFS</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2019/12/17/My-first-Blog/" >
+            
+                <span>Hadoop系列-HDFS（一）</span>
+        </a>
+        <div class="abstract-content">
+            
+
+
+
+1.Hadoop简介
+Hadoop是一个由Apache基金会所开发的分布式系统基础架构。用户可以在不了解分布式底层细节的情况下，开发分布式程序。充分利用集群的威力进行高速运算和存储。2.Hadoop特点1.高可靠性。Hadoop按位存储和处理数据的能力值得人们信赖。2.高扩展性。Hadoop是在可用的计算机集簇间分配数据并完成计算任务的，这些集簇可以方便地扩展到数以千计的节点中。3.高效性。Hadoop能够在节点之间动态地移动数据，并保证各个节点的动态平衡，因此处理速度非常快。4.高容错性。Hadoop能够自动保存数据的多个副本，并且能够自动将失败的任务重新分配。5.低成本。与一...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/12/17</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "大数据">大数据</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Hadoop">Hadoop</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "HDFS">HDFS</a>
     
 </div>
             
@@ -517,9 +598,23 @@ Mo...
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 2
+        Total : 4
         </div>
         <!-- search  -->
         
@@ -529,6 +624,25 @@ Mo...
     
     
     
+    
+    <div class="archive-year"> 2019 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">12/17</span><a class="archive-post-title" href= "/2019/12/17/Hadoop%E7%B3%BB%E5%88%97-HDFS%EF%BC%88%E4%B8%80%EF%BC%89/" >Hadoop系列-HDFS（一）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">12/17</span><a class="archive-post-title" href= "/2019/12/17/Hadoop%E7%B3%BB%E5%88%97-HDFS%EF%BC%88%E4%BA%8C%EF%BC%89/" >Hadoop系列-HDFS（二）</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
     
     <div class="archive-year"> Invalid date </div>
     <ul class="year-list">
@@ -549,7 +663,7 @@ Mo...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">12/17</span><a class="archive-post-title" href= "/2019/12/17/My-first-Blog/" >Hadoop系列（一）</a>
+            <span class="archive-post-date">12/17</span><a class="archive-post-title" href= "/2019/12/17/My-first-Blog/" >Hadoop系列-HDFS（一）</a>
         </li>
     
     </div>
@@ -560,6 +674,8 @@ Mo...
         <span class="sidebar-tag-name" data-tags="大数据"><span class="iconfont-archer">&#xe606;</span>大数据</span>
     
         <span class="sidebar-tag-name" data-tags="Hadoop"><span class="iconfont-archer">&#xe606;</span>Hadoop</span>
+    
+        <span class="sidebar-tag-name" data-tags="HDFS"><span class="iconfont-archer">&#xe606;</span>HDFS</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
